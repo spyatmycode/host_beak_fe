@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gilroy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roobert:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root{
+    --purple:#081494
+}
+
+.active_link{
+    color:var(--purple)
+}
+
+.active_link_icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding:10px;
+
+}
+
+.active_link_icon img{
+
+    width: 20px;
+    height: 20px;
+
+}
+
+.select-custom {
+    background-image: url("./assets/shared/Vector 21.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right 1em center;
+  }
+.upload-custom {
+    background-image: url("./assets/shared/Upload Icon.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right 1em center;
+  }
+
+/* #sidebar li:hover div p{
+    color: black
+}
+
+#sidebar li:hover div span{
+    background-color: var(--purple);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidebar li:hover div span img{
+    width: 20px;
+    height: 20px;
+    src: url("./assets/shared/logout.png") !important;
+} */
+
