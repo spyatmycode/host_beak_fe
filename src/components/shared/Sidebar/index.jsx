@@ -15,7 +15,7 @@ import {
   chevrondown,
   chevronright,
 } from "../../../assets/shared/shared";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Sublist from "./Sublist";
 import Chevron from "./Chevron";
 import LinkIcon from "./LinkIcon";
@@ -83,6 +83,8 @@ const Sidebar = () => {
   const {show, setShow, activeLink, setActiveLink} = useContext(AppContext)
 
   const location = useLocation();
+
+  const navigate = useNavigate()
 
   console.log(location);
 
@@ -270,7 +272,7 @@ const Sidebar = () => {
         </div>
       </li>
 
-      <li className="my-12">
+      <li className="my-12"  onClick={()=>navigate("/signup")}>
         <div className="flex items-center gap-10 text-[#C4C4C4] leading-[24.26px]">
           <img src={logout} alt="" className="w-[34px] h-[34px]" />
           <p className="text-[20px]">Logout</p>
