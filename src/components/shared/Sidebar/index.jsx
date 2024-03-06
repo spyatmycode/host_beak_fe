@@ -78,15 +78,15 @@ const links = {
 };
 
 const Sidebar = () => {
-  const purple = "#081494";
 
-  const {show, setShow, activeLink, setActiveLink} = useContext(AppContext)
+
+  const {show, setShow, activeLink, setActiveLink, setAuth} = useContext(AppContext)
 
   const location = useLocation();
 
   const navigate = useNavigate()
 
-  console.log(location);
+  // console.log(location);
 
   const handleClick = (e) => {
     
@@ -99,7 +99,7 @@ const Sidebar = () => {
     setActiveLink(e.target.dataset.link);
   };
 
-  console.log(activeLink);
+  // console.log(activeLink);
 
   return (
     <ul
@@ -272,7 +272,7 @@ const Sidebar = () => {
         </div>
       </li>
 
-      <li className="my-12"  onClick={()=>navigate("/signup")}>
+      <li className="my-12"  onClick={()=>{setAuth(false);navigate("/signup")}}>
         <div className="flex items-center gap-10 text-[#C4C4C4] leading-[24.26px]">
           <img src={logout} alt="" className="w-[34px] h-[34px]" />
           <p className="text-[20px]">Logout</p>

@@ -4,6 +4,7 @@ import Auth from "../pages/Auth";
 import Add from "../pages/Add";
 import AppProvider from "../providers/AppProvider";
 import View from "../pages/View";
+import Protected from "./Protected";
 
 const Router = () => {
   const authRoute = "/signup";
@@ -13,7 +14,9 @@ const Router = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <RootLayout />,
+      element: <Protected>
+        <RootLayout />
+      </Protected>,
       children: [
         {
           index: true,

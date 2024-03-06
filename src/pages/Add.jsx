@@ -109,9 +109,9 @@ const Add = () => {
 
       {/* Table */}
 
-      <div class="relative overflow-x-auto border sm:rounded-lg px-2 my-4">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto">
-          <thead class="text-xs text-gray-700 capitalize text-[20px] bg-white border-b-2">
+      <div className="relative overflow-x-auto border sm:rounded-lg px-2 my-4">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto">
+          <thead className="text-xs text-gray-700 capitalize text-[20px] bg-white border-b-2">
             <tr className="">
               <th scope="col" className="font-inter font-medium px-6 py-3">
                 Item
@@ -138,8 +138,8 @@ const Add = () => {
             </tr>
           </thead>
           <tbody>
-            <tr class="bg-white border-b font-ibm-plex-sans">
-              <td class="px-3 py-4 w-44 whitespace-nowrap " scope="col">
+            <tr className="bg-white border-b font-ibm-plex-sans">
+              <td className="px-3 py-4 w-44 whitespace-nowrap " scope="col">
                 <select
                   name=""
                   id=""
@@ -148,7 +148,7 @@ const Add = () => {
                   <option value="default">Choose</option>
                 </select>
               </td>
-              <td class="px-6 py-4 w-56">
+              <td className="px-6 py-4 w-56">
                 <select
                   name=""
                   id=""
@@ -157,27 +157,27 @@ const Add = () => {
                   <option value="default">Choose</option>
                 </select>
               </td>
-              <td class="px-6 py-4">
+              <td className="px-6 py-4">
                 <input
                   type="text"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                 />
               </td>
-              <td class="px-6 py-4 w-40">
+              <td className="px-6 py-4 w-40">
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                   placeholder={0}
                 />
               </td>
-              <td class="px-6 py-4 w-40">
+              <td className="px-6 py-4 w-40">
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                   placeholder={1}
                 />
               </td>
-              <td class="px-6 py-4">
+              <td className="px-6 py-4">
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
@@ -185,8 +185,8 @@ const Add = () => {
                 />
               </td>
 
-              <td class="px-6 py-4">N0.00</td>
-              <td class="flex items-center justify-center h-20 w-20">
+              <td className="px-6 py-4">N0.00</td>
+              <td className="flex items-center justify-center h-20 w-20">
                 <img src={deleteiconred} alt="" className="" />
               </td>
             </tr>

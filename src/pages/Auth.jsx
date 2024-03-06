@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import mainImg from "../assets/auth/image 2.png"
-import { useNavigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
+import { AppContext } from '../providers/AppProvider'
 
 const Auth = () => {
 
     const navigate = useNavigate()
+
+    const {auth, setAuth} = useContext(AppContext)
+
+    
+
+    if(auth) return <Navigate to={"/purchases/bills"} />
 
 
     const [inputs, setInputs] = useState({
@@ -23,7 +30,7 @@ const Auth = () => {
         setInputs({...inputs, [name]:value})
     }
 
-    console.log(inputs);
+    // console.log(inputs);
 
     const handleSubmit =(e)=>{
         e.preventDefault();
@@ -35,6 +42,8 @@ const Auth = () => {
             return
 
         }
+
+        setAuth(true)
         
         navigate("/purchases/bills")
    

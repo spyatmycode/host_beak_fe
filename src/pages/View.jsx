@@ -53,27 +53,27 @@ const View = () => {
     <div className="w-full pl-10 h-full overflow-y-auto py-10 pr-24 font-inter">
       <h2 className="font-[700] text-[36px] py-5 ">View reports</h2>
 
-      <div class="relative overflow-x-auto sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+      <div className="relative overflow-x-auto sm:rounded-lg">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500">
           <tbody>
             {data.map((each) => {
               return (
-                <tr class="bg-white border hover:bg-gray-50">
-                  <td class="w-4 p-4">
-                    <div class="flex items-center">
+                <tr className="bg-white border hover:bg-gray-50">
+                  <td className="w-4 p-4">
+                    <div className="flex items-center">
                       <input
                         id="checkbox-table-search-1"
                         type="checkbox"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                       />
-                      <label for="checkbox-table-search-1" class="sr-only">
+                      <label for="checkbox-table-search-1" className="sr-only">
                         checkbox
                       </label>
                     </div>
                   </td>
                   <td
                      
-                    class=" py-4 text-gray-900 whitespace-nowrap flex items-center gap-3"
+                    className=" py-4 text-gray-900 whitespace-nowrap flex items-center gap-3"
                   >
                     <p className="capitalize text-[#304156] text-[20px]">
                       {each.reportName}
@@ -86,9 +86,9 @@ const View = () => {
                     />
                   </td>
 
-                  <td class="py-4">{each.date}</td>
+                  <td className="py-4">{each.date}</td>
 
-                  <td class="flex items-center gap-5 px-6 py-4">
+                  <td className="flex items-center gap-5 px-6 py-4">
                     <button className="px-6 py-3 bg-[#3DB0FF] font-semibold text-[20px] text-white rounded-sm">
                       View
                     </button>
