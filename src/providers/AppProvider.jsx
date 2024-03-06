@@ -4,6 +4,11 @@ export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
   const initialAuth = localStorage.getItem("host_beak_auth") ? JSON.parse(localStorage.getItem("host_beak_auth")) : false
+
+
+
+
+  console.log("init",initialAuth);
   const [activeLink, setActiveLink] = useState("");
   const [show, setShow] = useState(true);
   const [auth, setAuth] = useState(initialAuth);

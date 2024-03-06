@@ -43,6 +43,9 @@ const Auth = () => {
 
         }
 
+
+        localStorage.setItem("host_beak_auth", true);
+
         setAuth(true)
         
         navigate("/purchases/bills")
