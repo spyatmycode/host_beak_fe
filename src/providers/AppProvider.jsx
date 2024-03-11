@@ -9,9 +9,12 @@ const AppProvider = ({ children }) => {
 
 
   console.log("init",initialAuth);
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("purchases");
   const [show, setShow] = useState(true);
   const [auth, setAuth] = useState(initialAuth);
+
+
+  console.log("active link", activeLink);
 
   useEffect(()=>{
 

@@ -4,17 +4,17 @@ import { notification } from "../../../assets/shared/shared";
 
 const index = () => {
   return (
-    <header className="w-full bg-[#F9F9F9] flex fixed top-0 h-[14%] items-center justify-between">
-      <div className="flex h-full items-center pl-5 cursor-pointer">
+    <header className="w-full bg-[#F9F9F9] flex fixed top-0 h-[14%] items-center justify-between cursor-pointer">
+      <div className="flex h-full items-center pl-5 cursor-pointer border-none">
         <Logo />
       </div>
 
       <div className="flex items-center gap-5 pr-24 cursor-pointer font-gilroy">
-        <img src={notification} alt="" />
-        <div className="w-[50px] h-[50px] rounded-full block bg-[#091E46]">
+        <img src={notification} alt="" className="hidden lg:flex" />
+        <div className="lg:w-[50px] w-[0px] h-[30px] lg:h-[50px] rounded-full bg-[#091E46]  hidden lg:flex">
           {" "}
         </div>
-        <select name="profile" id="profile_image" className="bg-transparent outline-none cursor-pointer">
+        <select name="profile" id="profile_image" className="bg-transparent outline-none cursor-pointer hidden lg:flex">
           <option value="Oluwanifemi">Oluwanifemi</option>
         </select>
       </div>

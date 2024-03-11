@@ -14,6 +14,8 @@ import {
   people,
   chevrondown,
   chevronright,
+  purchase_active,
+  people_active,
 } from "../../../assets/shared/shared";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import Sublist from "./Sublist";
@@ -89,9 +91,19 @@ const Sidebar = () => {
   // console.log(location);
 
   const handleClick = (e) => {
+
+    console.log(e);
+
+
     
-    if(e.target.parentNode.dataset.link === activeLink){
+    if(e.target.dataset.link === activeLink){
+      console.log("HERE???");
+      
       setShow(!show)
+
+      return
+
+      
     }
 
     setShow(true);
@@ -99,23 +111,25 @@ const Sidebar = () => {
     setActiveLink(e.target.dataset.link);
   };
 
+  console.log("Show", show);
+
   // console.log(activeLink);
 
   return (
     <ul
       id="sidebar"
-      className="bg-[#F9F9F9] pl-16 pr-5 flex flex-col items-start gap-7 fixed left-0 top-[14%] bottom-0 font-normal py-10 overflow-y-auto cursor-pointer  w-[26%] font-gilroy 
+      className="bg-[#F9F9F9] hidden select-none pl-16 pr-[47px] lg:flex flex-col items-start gap-9 fixed left-0 top-[14%] bottom-0 font-normal py-10 overflow-y-auto cursor-pointer  w-[381px] font-gilroy 
       
       "
     >
       <li name="welcome">
-        <div className="flex items-center gap-10 text-[#C4C4C4] leading-[24.26px]">
+        <div className="flex items-center gap-10 text-[#C4C4C4] w-full leading-[24.26px]">
           <img src={rocket} alt="" className="w-[34px] h-[34px]" />
           <p className="text-[20px]">Welcome</p>
         </div>
       </li>
       <li name="dashboard">
-        <div className="flex items-center gap-10 text-[#C4C4C4] leading-[24.26px]">
+        <div className="flex items-center gap-10 text-[#C4C4C4] w-full leading-[24.26px]">
           <img src={dashboard} alt="" className="w-[34px] h-[34px]" />
           <p className="text-[20px]">Dashboard</p>
         </div>
@@ -137,7 +151,7 @@ const Sidebar = () => {
           />
           <span
             data-link={"sales"}
-            className="flex items-center justify-between w-full"
+            className="flex items-center w-full justify-between"
           >
             <p data-link={"sales"} className="text-[20px]">
               Sales
@@ -149,9 +163,9 @@ const Sidebar = () => {
       <li data-link={"purchases"} className="w-full" onClick={handleClick}>
         <div
           data-link={"purchases"}
-          className="flex items-start gap-10 text-[#C4C4C4]  leading-[24.26px]"
+          className="flex items-start gap-10 text-[#C4C4C4] w-full leading-[24.26px]"
         >
-           <LinkIcon activeLink={activeLink} icon={purchase} show={show} parentLink={"purchases"}/>
+           <LinkIcon key={"purchases"} activeLink={activeLink} icon={purchase} show={show} parentLink={"purchases"} icon_active={purchase_active}/>
           <span
             data-link={"purchases"}
             className="flex items-center justify-between w-full"
@@ -182,7 +196,7 @@ const Sidebar = () => {
         </div>
       </li>
       <li className="w-full">
-        <div className="flex items-center gap-10 text-[#C4C4C4]  leading-[24.26px]">
+        <div className="flex items-center gap-10 w-full text-[#C4C4C4]  leading-[24.26px]">
           <img src={accounting} alt="" className="w-[34px] h-[34px]" />
           <span className="flex items-center justify-between w-full">
             <p className="text-[20px]  transition duration-300 ease-in-out">
@@ -193,7 +207,7 @@ const Sidebar = () => {
         </div>
       </li>
       <li className="w-full">
-        <div className="flex items-center gap-10 text-[#C4C4C4]  leading-[24.26px]">
+        <div className="flex items-center gap-10 text-[#C4C4C4] w-full   leading-[24.26px]">
           <img src={bank} alt="" className="w-[34px] h-[34px]" />
           <span className="flex items-center justify-between w-full">
             <p className="text-[20px]  transition duration-300 ease-in-out">
@@ -204,7 +218,7 @@ const Sidebar = () => {
         </div>
       </li>
       <li className="w-full">
-        <div className="flex items-center gap-10 text-[#C4C4C4]  leading-[24.26px]">
+        <div className="flex items-center gap-10 text-[#C4C4C4] w-full leading-[24.26px]">
           <img src={invoice} alt="" className="w-[34px] h-[34px]" />
           <span className="flex items-center justify-between w-full">
             <p className="text-[20px]  transition duration-300 ease-in-out">
@@ -215,7 +229,7 @@ const Sidebar = () => {
         </div>
       </li>
       <li className="w-full">
-        <div className="flex items-center gap-10 text-[#C4C4C4]  leading-[24.26px]">
+        <div className="flex items-center gap-10 text-[#C4C4C4] w-full leading-[24.26px]">
           <img src={report} alt="" className="w-[34px] h-[34px]" />
           <span className="flex items-center justify-between w-full">
             <p className="text-[20px]  transition duration-300 ease-in-out">
@@ -230,7 +244,7 @@ const Sidebar = () => {
           data-link={"analytics"}
           className="flex items-start gap-10 text-[#C4C4C4]  leading-[24.26px]"
         >
-          <LinkIcon activeLink={activeLink} show={show} icon={accounting} parentLink={"analytics"}/>
+          <LinkIcon activeLink={activeLink} show={show} icon={people}  parentLink={"analytics"} icon_active={people_active}/>
           <span
             data-link={"analytics"}
             className="flex items-center justify-between w-full"
@@ -261,7 +275,7 @@ const Sidebar = () => {
           </span>
         </div>
       </li>
-      <li className="w-full">
+      <li className=" w-full">
         <div className="flex items-center gap-10 text-[#C4C4C4]  leading-[24.26px]">
           <img src={settings} alt="" className="w-[34px] h-[34px]" />
           <span className="flex items-center justify-between w-full">
@@ -278,14 +292,14 @@ const Sidebar = () => {
           <p className="text-[20px]">Logout</p>
         </div>
       </li>
-      <li>
-        <button className="flex items-center gap-5 text-white px-5 py-5 leading-[24.26px] bg-[#081494] rounded-md">
+      <li className="w-full">
+        <button className="flex items-center relative right-[20px] w-[303.43px] gap-5 text-white px-5 py-5 leading-[24.26px] bg-[#081494] rounded-md">
           <img
             src={card}
             alt=""
             className={"w-[34px] h-[34px] rounded-md bg-[#081494]"}
           />
-          <p className="text-[25px]">Accept Payments</p>
+          <p className="text-[25px] whitespace-nowrap">Accept Payments</p>
         </button>
       </li>
     </ul>

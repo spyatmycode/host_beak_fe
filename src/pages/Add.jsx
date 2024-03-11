@@ -7,8 +7,8 @@ const Add = () => {
       <h2 className="font-[700] text-[36px] py-5 font-inter">Add bill</h2>
 
       {/* Inputs */}
-      <div className="grid grid-cols-3 w-auto gap-y-7 py-10">
-        <div className="flex flex-col items-start w-2/3 gap-2">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-y-7 py-10 lg:w-[85%] w-full gap-[100px]">
+        <div className="flex flex-col items-start w-full gap-2">
           <label htmlFor="" className="text-[#304156] text-[14px] font-inter font-medium">
             Vendor
           </label>
@@ -21,7 +21,7 @@ const Add = () => {
             <option value="default">Choose</option>
           </select>
         </div>
-        <div className="flex flex-col items-start w-2/3 gap-2 ">
+        <div className="flex flex-col items-start w-full gap-2 ">
           <label htmlFor="" className="text-[#304156]  text-[14px] font-inter font-medium">
             Date
           </label>
@@ -39,12 +39,12 @@ const Add = () => {
 
           <input
             type="text"
-            className="text-[#727E8C] font-ibm-plex-sans text-[17px] w-4/5 border px-4 py-4 rounded-md  font-normal"
+            className="text-[#727E8C] font-ibm-plex-sans text-[17px] w-full border px-4 py-4 rounded-md  font-normal"
           />
         </div>
 
         {/* Row 2 */}
-        <div className="flex flex-col items-start w-2/3 gap-2 font-inter font-medium">
+        <div className="flex flex-col items-start w-full gap-2 font-inter font-medium">
           <label htmlFor="" className="text-[#304156] text-[14px]">
             Currency
           </label>
@@ -57,7 +57,7 @@ const Add = () => {
             <option value="default">USD - U.S dollar</option>
           </select>
         </div>
-        <div className="flex flex-col items-start w-2/3 gap-2 ">
+        <div className="flex flex-col items-start w-full gap-2 ">
           <label htmlFor="" className="text-[#304156]  text-[14px] font-inter font-medium">
             Due Date
           </label>
@@ -68,20 +68,20 @@ const Add = () => {
             className="text-[#727E8C] font-ibm-plex-sans text-[17px] w-full border px-4 py-4 rounded-m font-normal"
           />
         </div>
-        <div className="flex flex-col items-start  w-4/5 gap-2 relative">
+        <div className="flex flex-col items-start  w-full gap-2 relative">
           <label htmlFor="" className="text-[#304156] text-[14px] font-inter font-medium">
             Notes
           </label>
 
           <textarea
-            type="text"
-            className="text-[#727E8C] font-ibm-plex-sans w-full text-[17px]  border px-4 py-4 rounded-md absolute h-48 top-8 font-normal"
+            type="text" 
+            className="text-[#727E8C] resize-none font-ibm-plex-sans w-full text-[17px]  border px-4 py-4 rounded-md lg:absolute h-44 top-8 font-normal"
           />
         </div>
 
         {/* Row 3 */}
 
-        <div className="flex flex-col items-start w-2/3 gap-2 ">
+        <div className="flex flex-col items-start w-full gap-2 ">
           <label htmlFor="" className="text-[#304156]  text-[14px] font-inter font-medium">
             Upload Copy of Bill
           </label>
@@ -95,7 +95,7 @@ const Add = () => {
           </select>
           
         </div>
-        <div className="flex flex-col items-start  w-2/3 gap-2 ">
+        <div className="flex flex-col items-start  w-full gap-2 ">
           <label htmlFor="" className="text-[#304156] text-[14px] font-inter font-medium">
             P.O / S.O
           </label>
@@ -111,9 +111,9 @@ const Add = () => {
 
       <div className="relative overflow-x-auto border sm:rounded-lg px-2 my-4">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 overflow-x-auto">
-          <thead className="text-xs text-gray-700 capitalize text-[20px] bg-white border-b-2">
+          <thead className="text-xs text-gray-700 capitalize text-[20px] bg-white border-b-2 border-b-[#98A2B3]">
             <tr className="">
-              <th scope="col" className="font-inter font-medium px-6 py-3">
+              <th scope="col" className="font-inter px-6 py-3">
                 Item
               </th>
               <th scope="col" className="font-inter px-6 py-3 whitespace-nowrap">
@@ -157,27 +157,27 @@ const Add = () => {
                   <option value="default">Choose</option>
                 </select>
               </td>
-              <td className="px-6 py-4">
+              <td className="px-6 py-4 w-[100px]" >
                 <input
                   type="text"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                 />
               </td>
-              <td className="px-6 py-4 w-40">
+              <td className="px-6 py-4 w-[100px]" colspan="1">
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                   placeholder={0}
                 />
               </td>
-              <td className="px-6 py-4 w-40">
+              <td className="px-6 py-4">
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
                   placeholder={1}
                 />
               </td>
-              <td className="px-6 py-4">
+              <td className="px-6 py-4" >
                 <input
                   type="number"
                   className="text-[#727E8C] text-[17px] w-full border px-4 py-4 rounded-md"
@@ -197,21 +197,29 @@ const Add = () => {
               <td colspan="5"></td>
               <td
                 colSpan={"4"}
-                className="flex flex-col items-start gap-2 py-3"
+                className="flex items-start gap-[32px] py-3"
               >
-                <div className="flex flex-col w-full items-start gap-4 text-[#1D2939]">
-                  <div className="w-full">
-                    <span className="flex items-center justify-between">
-                      <p>Subtotal:</p>
-                      <p>N0.00</p>
-                    </span>
-                  </div>
-                  <div className="w-full">
-                    <span className="flex items-center justify-between gap-3">
-                      <p>Total(NGN):</p>
-                      <p>N0.00</p>
-                    </span>
-                  </div>
+                <div className="flex flex-col items-end gap-[17.5px]">
+                  <span>
+                  Subtotal:
+
+                  </span>
+                  <span>
+                  Total(NGN):
+
+
+                    
+                  </span>
+                </div>
+                <div  className="flex flex-col items-start gap-[17.5px]">
+                  <span>
+                  N0.00
+
+                  </span>
+                  <span>
+                  N0.00
+
+                  </span>
                 </div>
               </td>
             </tr>
@@ -221,12 +229,12 @@ const Add = () => {
 
       {/* Buttons */}
 
-      <div className="w-full flex justify-end py-10">
-        <div className="flex items-center gap-5 font-inter">
-          <button className="border rounded-md bg-white text-[18px] text-[#667085] font-[300] px-5 py-4">
+      <div className="w-full flex !justify-end py-10">
+        <div className="flex w-full lg:w-auto items-center gap-5 flex-col lg:flex-row font-inter">
+          <button className="border rounded-md bg-white text-[18px] w-full lg:w-[129px] text-[#667085] font-[300] px-5 py-4">
             Cancel
           </button>
-          <button className="rounded-md bg-[#3DB0FF] text-[18px] text-white font-[300] px-5 py-4">
+          <button className="rounded-md bg-[#3DB0FF] w-full lg:w-[112px] text-[18px] text-white font-[300] px-5 py-4">
             Save
           </button>
         </div>

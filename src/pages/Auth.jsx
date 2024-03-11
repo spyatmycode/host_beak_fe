@@ -55,7 +55,7 @@ const Auth = () => {
     }
     return (
         <div className='flex select-none'>
-            <div className='hidden lg:block w-1/2 h-screen relative'>
+            <div className='hidden lg:block w-1/2 fixed top-0 bottom-0'>
                 <img className='absolute w-full h-full ' src={mainImg} alt="" />
 
                 <div className='absolute z-10 top-[60%] w-full flex justify-center'>
@@ -66,9 +66,9 @@ const Auth = () => {
                 </div>
 
             </div>
-            <div className='w-full lg:w-1/2 h-screen font-roobert'>
+            <div className='w-full lg:w-1/2 h-screen fixed top-0 bottom-0 lg:left-1/2 overflow-y-scroll font-roobert pt-[45px] pl-[63px] pr-[63px] lg:pr-[99.53px] pb-[44.34px]'>
 
-                <header className='pl-12 lg:pt-10 pt-5 flex flex-col items-start gap-5 '>
+                <header className=' flex flex-col items-start gap-5 '>
                     <h4 className='text-[#272262] text-lg lg:text-[36px] font-[700]'>
                         Create Account
                     </h4>
@@ -77,14 +77,14 @@ const Auth = () => {
                     </h5>
                 </header>
 
-                <form onSubmit={handleSubmit} className='pl-12 pr-12 lg:pr-0 lg:w-4/5 w-full lg:pt-10 pt-5 text-[#82869A] flex flex-col gap-6 text-[20px]'>
+                <form onSubmit={handleSubmit} className='w-full lg:pt-10 pt-5 text-[#82869A] flex flex-col gap-6 text-[20px]'>
 
-                    <div className='flex flex-col lg:flex-row w-full gap-10 align-baseline'>
+                    <div className='flex flex-col gap-6 lg:gap-0 lg:flex-row w-full justify-between align-baseline'>
                         <span className='flex flex-col'>
                             <label htmlFor="" className='pb-3 lg:text-[20px] text-sm'>First Name</label>
                             <input type="text"
                                 placeholder='Enter your first name'
-                                className='text-[#373C56]
+                                className='text-[#373C56] placeholder:text-[#82869A80]
                                 border-b-[#EBEBEB] border-b-[3px]
                                 pb-3 focus:border-b-[#272262] outline-none
                                 transition duration-300 ease-in-out 
@@ -102,7 +102,7 @@ const Auth = () => {
                                 className='text-[#373C56]
                                 border-b-[#EBEBEB] border-b-[3px]
                                 pb-3 focus:border-b-[#272262] outline-none transition duration-300 ease-in-out 
-                                lg:text-[24px] text-base
+                                lg:text-[24px] text-base placeholder:text-[#82869A80]
                             '
                                 name='lastname'
                                 onChange={handleInputs}
@@ -121,7 +121,7 @@ const Auth = () => {
                                 className='text-[#373C56]
                                 border-b-[#EBEBEB] border-b-[3px]
                                 pb-3 focus:border-b-[#272262] outline-none transition duration-300 ease-in-out 
-                                lg:text-[24px] text-base
+                                lg:text-[24px] text-base placeholder:text-[#82869A80]
                             '
                                 name='phonenumber'
                                 onChange={handleInputs}
@@ -138,7 +138,7 @@ const Auth = () => {
                                 className='text-[#373C56]
                                 border-b-[#EBEBEB] border-b-[3px]
                                 pb-3 focus:border-b-[#272262] outline-none transition duration-300 ease-in-out 
-                                lg:text-[24px] text-base
+                                lg:text-[24px] text-base placeholder:text-[#82869A80]
                             '
                                 name='email'
                                 onChange={handleInputs}
@@ -155,7 +155,7 @@ const Auth = () => {
                                 className='text-[#373C56]
                                 border-b-[#EBEBEB] border-b-[3px]
                                 pb-3 focus:border-b-[#272262] outline-none transition duration-300 ease-in-out 
-                                lg:text-[24px] text-base
+                                lg:text-[24px] text-base placeholder:text-[#82869A80]
                                 '
                                 name='password'
                                 onChange={handleInputs}
@@ -190,14 +190,25 @@ const Auth = () => {
                         </button>
 
                         <span className='flex text-sm lg:text-[21px] py-2 lg:py-5 items-center gap-2 text-center w-full justify-center'>
-                            <p className=''>
+                            <div className='h-full w-full border-b block'>
+                               
+                               
+
+                            </div>
+                            <p className='whitespace-nowrap font-manrope lg:text-[21px] font-400'>
                                 Got an Account?
                             </p>
                             <span>
-                                <a href="#" className='text-[#3DB0FF]'>
+                                <a href="#" className='text-[#3DB0FF] whitespace-nowrap font-manrope lg:text-[21px] font-400'>
                                     Sign In
                                 </a>
                             </span>
+
+                            <div className='h-full w-full border-b block'>
+                               
+                               
+
+                               </div>
                         </span>
                     </div>
 
