@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AppContext } from "../../../providers/AppProvider";
 
 const Sublist = ({ items, parentLink, activeLink , show}) => {
+
+  const {setActiveLink}= useContext(AppContext)
 
     
 
@@ -12,6 +15,7 @@ const Sublist = ({ items, parentLink, activeLink , show}) => {
         return (
           <li key={link}>
             <NavLink
+            onClick={(e)=>{console.log("Clicked the nav", parentLink); setActiveLink(parentLink)}}
               to={link}
               className={({ isActive }) =>
                 isActive ? "active_link" : ""

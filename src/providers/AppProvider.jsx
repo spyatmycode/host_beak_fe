@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [activeLink, setActiveLink] = useState("purchases");
   const [show, setShow] = useState(true);
   const [auth, setAuth] = useState(initialAuth);
+  const [showSidebar, setShowSidebar]= useState(false)
 
 
   console.log("active link", activeLink);
@@ -22,7 +23,7 @@ const AppProvider = ({ children }) => {
 
   },[initialAuth])
   return (
-    <AppContext.Provider value={{ show, setShow, activeLink, setActiveLink, auth, setAuth }}>
+    <AppContext.Provider value={{ show, setShow, activeLink, setActiveLink, auth, setAuth, showSidebar, setShowSidebar }}>
       {children}
     </AppContext.Provider>
   );

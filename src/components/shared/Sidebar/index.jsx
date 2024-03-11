@@ -82,7 +82,7 @@ const links = {
 const Sidebar = () => {
 
 
-  const {show, setShow, activeLink, setActiveLink, setAuth} = useContext(AppContext)
+  const {show, setShow, activeLink, setActiveLink, setAuth, showSidebar, setShowSidebar} = useContext(AppContext)
 
   const location = useLocation();
 
@@ -96,9 +96,13 @@ const Sidebar = () => {
 
 
     
+
+
+    
     if(e.target.dataset.link === activeLink){
       console.log("HERE???");
       
+      setActiveLink(e.target.dataset.link);
       setShow(!show)
 
       return
@@ -113,15 +117,18 @@ const Sidebar = () => {
 
   console.log("Show", show);
 
+
+
   // console.log(activeLink);
 
   return (
     <ul
       id="sidebar"
-      className="bg-[#F9F9F9] hidden select-none pl-16 pr-[47px] lg:flex flex-col items-start gap-9 fixed left-0 top-[14%] bottom-0 font-normal py-10 overflow-y-auto cursor-pointer  w-[381px] font-gilroy 
+      className={`bg-[#F9F9F9] ${!showSidebar && "hidden"}  select-none pl-16 pr-[47px] lg:flex flex-col flex  items-start gap-9 fixed left-0 top-[14%] bottom-0 font-normal py-10 overflow-y-auto cursor-pointer z-[99999]  w-[381px] font-gilroy 
       
-      "
+      `}
     >
+
       <li name="welcome">
         <div className="flex items-center gap-10 text-[#C4C4C4] w-full leading-[24.26px]">
           <img src={rocket} alt="" className="w-[34px] h-[34px]" />

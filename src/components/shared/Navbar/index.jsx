@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logo from "./Logo";
 import { notification } from "../../../assets/shared/shared";
+import { AppContext } from "../../../providers/AppProvider";
 
 const index = () => {
+
+  const {showSidebar, setShowSidebar} = useContext(AppContext)
   return (
     <header className="w-full bg-[#F9F9F9] flex fixed top-0 h-[14%] items-center justify-between cursor-pointer">
-      <div className="flex h-full items-center pl-5 cursor-pointer border-none">
+      <div className="flex h-full items-center pl-5 cursor-pointer border-none" onClick={()=>setShowSidebar(!showSidebar)}>
         <Logo />
       </div>
 
