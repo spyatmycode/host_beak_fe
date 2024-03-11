@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 export const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-  const initialAuth = localStorage.getItem("host_beak_auth") ? JSON.parse(localStorage.getItem("host_beak_auth")) : false
+  const initialAuth = sessionStorage.getItem("host_beak_auth") ? JSON.parse(sessionStorage.getItem("host_beak_auth")) : false
 
 
 

@@ -44,7 +44,7 @@ const Auth = () => {
         }
 
 
-        localStorage.setItem("host_beak_auth", true);
+        sessionStorage.setItem("host_beak_auth", true);
 
         setAuth(true)
         

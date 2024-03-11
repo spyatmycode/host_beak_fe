@@ -286,7 +286,7 @@ const Sidebar = () => {
         </div>
       </li>
 
-      <li className="my-12"  onClick={()=>{localStorage.removeItem("host_beak_auth");setAuth(false);navigate("/signup")}}>
+      <li className="my-12"  onClick={()=>{sessionStorage.removeItem("host_beak_auth");setAuth(false);navigate("/signup")}}>
         <div className="flex items-center gap-10 text-[#C4C4C4] leading-[24.26px]">
           <img src={logout} alt="" className="w-[34px] h-[34px]" />
           <p className="text-[20px]">Logout</p>
